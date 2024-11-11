@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "lint": "eslint .",
+    "lint": "npx eslint . && echo \"\nCompiling TS with strict true\" && tsc --noEmit --strict true",
     "preview": "vite preview"
   },
   "dependencies": {
