@@ -1,8 +1,6 @@
-import {SpecificMuzzleAttachment} from "@/types/muzzle.ts";
+import {RifleMuzzleAttachment} from "@/types/muzzle.ts";
 
-type RifleMuzzleNames = "Compensator" | "Muzzle Brake" | "Suppressor" | "Ported Compensator";
-
-export type RifleMuzzleAttachment = SpecificMuzzleAttachment<RifleMuzzleNames>;
+export const rifleMuzzleNames = ["Compensator", "Muzzle Brake", "Suppressor", "Ported Compensator"]
 
 export type RifleAttachments = {
     muzzles: RifleMuzzleAttachment[];
