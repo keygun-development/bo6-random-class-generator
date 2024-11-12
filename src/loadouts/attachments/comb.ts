@@ -1,4 +1,4 @@
-import {Attachment} from "@/types/attachments";
+import {Attachment} from "@/types";
 import {CombNames} from "@/types/attachments/comb.ts";
 
 export const comb: Attachment<CombNames>[] = [

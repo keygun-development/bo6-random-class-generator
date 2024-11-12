@@ -1,4 +1,4 @@
-import {Attachment} from "@/types/attachments";
+import {Attachment} from "@/types";
 import {LaserNames} from "@/types/attachments/laser.ts";
 
 export const lasers: Attachment<LaserNames>[] = [

@@ -1,4 +1,4 @@
-import {Attachment} from "@/types/attachments";
+import {Attachment} from "@/types";
 import {RearGripNames} from "@/types/attachments/reargrip.ts";
 
 export const rearGrips: Attachment<RearGripNames>[] = [
