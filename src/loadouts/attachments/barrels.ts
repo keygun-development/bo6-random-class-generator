@@ -1,6 +1,7 @@
 import {Attachment} from "@/types";
+import {BarrelNames} from "@/types/barrel.ts";
 
-export const barrels: Attachment[] = [
+export const barrels: Attachment<BarrelNames>[] = [
     {
         name: "CHF Barrel",
         image: "/attachments/muzzles/chf_barrel.png",
