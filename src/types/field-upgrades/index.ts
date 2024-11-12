@@ -1,0 +1,11 @@
+export type FieldUpgradeNames = "Assault pack"
+    | "Spring mine"
+    | "Throphy system"
+    | "Scrambler"
+    | "Signal lure"
+    | "War cry"
+    | "Tactical insertion"
+    | "Acoustic amp"
+    | "Morphine injector"
+    | "Neurogas"
+    | "Sleeper agent";
