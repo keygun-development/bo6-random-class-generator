@@ -1,4 +1,4 @@
-import {RifleMuzzleAttachment} from "@/types/muzzle.ts";
+import {RifleMuzzleAttachment} from "@/types/attachments/muzzle.ts";
 
 export const rifleMuzzleNames = ["Compensator", "Muzzle Brake", "Suppressor", "Ported Compensator"]
 

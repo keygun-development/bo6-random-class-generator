@@ -1,4 +1,4 @@
-import {Attachment} from "@/types/attachments";
+import {Attachment} from "@/types/attachments/index.ts";
 
 export type MuzzleNames = "Compensator"
     | "Full Choke"

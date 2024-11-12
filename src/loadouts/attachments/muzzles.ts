@@ -1,5 +1,5 @@
 import {Attachment} from "@/types/attachments";
-import {MuzzleNames} from "@/types/muzzle.ts";
+import {MuzzleNames} from "@/types/attachments/muzzle.ts";
 
 export const muzzles: Attachment<MuzzleNames>[] = [
     { name: "Compensator", image: "/attachments/muzzles/compensator.png" },
