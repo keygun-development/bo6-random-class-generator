@@ -1,6 +1,7 @@
-import { Attachment } from "@/types";
+import { Attachment } from "@/types/attachments";
+import {OpticNames} from "@/types/attachments/optic.ts";
 
-export const optics: Attachment[] = [
+export const optics: Attachment<OpticNames>[] = [
   {
     name: "Otero Micro Dot",
     image: "/attachments/optics/otero_micro_dot.png",

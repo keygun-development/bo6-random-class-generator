@@ -1,6 +1,7 @@
-import {Attachment} from "@/types";
+import {Attachment} from "@/types/attachments";
+import {StockPadNames} from "@/types/attachments/stockpad.ts";
 
-export const stockPads: Attachment[] = [
+export const stockPads: Attachment<StockPadNames>[] = [
     {
         name: "Lightweight Pad",
         image: "/attachments/stockpads/lightweight_pad.png",

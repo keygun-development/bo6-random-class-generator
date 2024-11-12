@@ -1,0 +1,15 @@
+export type StockNames =
+    | "Agility Stock"
+    | "Akimbo 9mm PM"
+    | "Akimbo Grekhova"
+    | "Akimbo GS45"
+    | "Akimbo Stryder .22"
+    | "Balanced Stock"
+    | "Combat Stock"
+    | "Ergonomic Stock"
+    | "Full Stock"
+    | "Heavy Stock"
+    | "Infiltrator Stock"
+    | "Light Stock"
+    | "No Stock"
+    | "Weighted Stock";

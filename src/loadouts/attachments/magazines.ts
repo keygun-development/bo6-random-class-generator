@@ -1,6 +1,7 @@
-import {Attachment} from "@/types";
+import {Attachment} from "@/types/attachments";
+import {MagazineNames} from "@/types/attachments/magazine.ts";
 
-export const magazines: Attachment[] = [
+export const magazines: Attachment<MagazineNames>[] = [
     {
         name: "Extended Mag I",
         image: "/attachments/magazines/extended_mag_i.png",
