@@ -2,9 +2,11 @@ import {useState} from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import {xm4} from "@/loadouts/primary-guns/assault-rifles/xm4.ts";
 
 function App() {
   const [count, setCount] = useState(0);
+  console.log(xm4.attachments.muzzles)
 
   return (
     <>
