@@ -1,4 +1,4 @@
-import {Attachment} from "@/types";
+import {Attachment} from "@/types/attachments";
 import {MuzzleNames} from "@/types/muzzle.ts";
 
 export const muzzles: Attachment<MuzzleNames>[] = [

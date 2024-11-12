@@ -1,6 +1,7 @@
-import {Attachment} from "@/types";
+import {Attachment} from "@/types/attachments";
+import {CombNames} from "@/types/attachments/comb.ts";
 
-export const comb: Attachment[] = [
+export const comb: Attachment<CombNames>[] = [
     {
         name: "Combat Riser",
         image: "/attachments/comb/combat-riser.png",

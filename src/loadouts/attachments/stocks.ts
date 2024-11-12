@@ -1,6 +1,7 @@
-import {Attachment} from "@/types";
+import {Attachment} from "@/types/attachments";
+import {StockNames} from "@/types/attachments/stock.ts";
 
-export const stocks: Attachment[] = [
+export const stocks: Attachment<StockNames>[] = [
     {
         name: "Agility Stock",
         image: "/attachments/stocks/agility-stock.png",

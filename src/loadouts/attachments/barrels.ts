@@ -1,5 +1,5 @@
-import {Attachment} from "@/types";
-import {BarrelNames} from "@/types/barrel.ts";
+import {Attachment} from "@/types/attachments";
+import {BarrelNames} from "@/types/attachments/barrel.ts";
 
 export const barrels: Attachment<BarrelNames>[] = [
     {
