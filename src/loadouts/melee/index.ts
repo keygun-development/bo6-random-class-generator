@@ -1,7 +1,7 @@
-import {Melee} from "@/types";
 import {Melees} from "@/types/melees";
+import {Item} from "@/types";
 
-export const melees: Melee<Melees>[] = [
+export const melees: Item<Melees>[] = [
     {
         name: "Knife",
         description: "One hit kill.",
