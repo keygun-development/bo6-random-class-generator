@@ -1,4 +1,4 @@
-import { Attachment } from "@/types/attachments";
+import { Attachment } from "@/types";
 import {OpticNames} from "@/types/attachments/optic.ts";
 
 export const optics: Attachment<OpticNames>[] = [

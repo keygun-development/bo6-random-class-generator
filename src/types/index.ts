@@ -5,3 +5,9 @@ export type Attachment<T extends string = string> = {
     pros?: string[];
     cons?: string[];
 };
+
+export type Melee<T extends string = string> = {
+    name: T,
+    description: string,
+    image: string,
+}

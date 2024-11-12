@@ -1,4 +1,4 @@
-import {Attachment} from "@/types/attachments";
+import {Attachment} from "@/types";
 import {FireModNames} from "@/types/attachments/firemods.ts";
 
 export const firemods: Attachment<FireModNames>[] = [

@@ -1,4 +1,4 @@
-import {Attachment} from "@/types/attachments";
+import {Attachment} from "@/types";
 import {StockPadNames} from "@/types/attachments/stockpad.ts";
 
 export const stockPads: Attachment<StockPadNames>[] = [

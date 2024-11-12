@@ -1,4 +1,4 @@
-import {Attachment} from "@/types/attachments";
+import {Attachment} from "@/types";
 import {MagazineNames} from "@/types/attachments/magazine.ts";
 
 export const magazines: Attachment<MagazineNames>[] = [
