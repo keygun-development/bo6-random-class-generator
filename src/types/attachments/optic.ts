@@ -1,3 +1,5 @@
+import {Attachment} from "@/types";
+
 export type OpticNames =
     | "Otero Micro Dot"
     | "Kepler Microflex"
@@ -32,4 +34,36 @@ export type OpticNames =
     | "Remuda Range Finder"
     | "SVD Scope"
     | "Thermal 6x"
-    | "VMF Variable Scope";
+    | "VMF Variable Scope"
+    | "Hawker Hybrid";
+
+type RifleOpticNames = Extract<
+    OpticNames,
+    "Otero Micro Dot"
+    | "Kepler Microflex"
+    | "Merlin Mini"
+    | "PrismaTech Reflex"
+    | "Volzhskiy Reflex"
+    | "Merlin Reflex"
+    | "Redwell Reflex"
+    | "Remuda Mini Reflex"
+    | "Dobrych MF Reflex"
+    | "Accu-Spot Reflex"
+    | "K&S Red Dot"
+    | "Kepler Red Dot"
+    | "Otero Red Dot"
+    | "OMS '92 Holo"
+    | "Pinpoint Holoscout"
+    | "Accu-Spot Ultra Holo"
+    | "Jason Armory 2x"
+    | "Willis 3x"
+    | "PrismaTech 4x"
+    | "Dobrych 4x"
+    | "Pinpoint Hybrid"
+    | "PrismaPoint Hybrid"
+    | "R&K Multizoom"
+    | "Blandwell 7x Scope"
+    | "Otero Thermal 2x"
+>;
+
+export type RifleOpticAttachment = Attachment<RifleOpticNames>;
