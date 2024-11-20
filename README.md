@@ -1,50 +1,21 @@
-# React + TypeScript + Vite
+# Black Ops 6 Random Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Purpose of This Repository
 
-Currently, two official plugins are available:
+This repository is dedicated to the **Black Ops 6 Random Generator**, a tool designed to create randomized loadouts for the popular game *Call of Duty: Black Ops 6*. Whether you're looking to challenge yourself, spice up your gameplay, or simply explore new strategies, this generator offers a fun and exciting way to do so.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Development Site
+The development version of the Black Ops 6 Random Generator is hosted at:  
+[**Development Site**](https://dev-bo6-random-class.netlify.app/)
 
-## Expanding the ESLint configuration
+This version includes the latest features and experimental updates. Please note that bugs may be present as this is the testing environment.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Production Site
+The stable and public-facing version of the Black Ops 6 Random Generator is hosted at:  
+[**Production Site**](https://bo6-random-class.netlify.app/)
 
-- Configure the top-level `parserOptions` property like this:
+This version is optimized for performance and reliability, providing a seamless experience for users.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
-```
+Feel free to contribute, report issues, or suggest new features. Happy gaming! 🎮
