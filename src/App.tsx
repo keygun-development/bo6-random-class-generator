@@ -19,17 +19,17 @@ function App() {
                     </span>
                 </div>
             </div>
-            <div className="grid grid-cols-4 gap-4 mt-4">
-                <h1 className="col-span-3 text-white text-4xl">
+            <div className="md:grid grid-cols-4 gap-4 mt-4">
+                <h1 className="col-span-3 text-white lg:text-4xl text-2xl md:text-2xl">
                     Loadout
                 </h1>
                 {includeScorestreaks && (
-                    <h2 className="col-span-1 text-white text-4xl">
+                    <h2 className="col-span-1 text-white lg:text-4xl hidden md:block md:text-2xl">
                         Scorestreaks
                     </h2>
                 )}
             </div>
-            <div className="grid grid-cols-4 gap-4 mt-4">
+            <div className="md:grid grid-cols-4 gap-4 mt-4">
                 <div className="col-span-3">
                     <Card/>
                     <div className="grid grid-cols-2 gap-4 mt-4">
@@ -49,14 +49,19 @@ function App() {
                             <Card/>
                         </div>
                     </div>
-                    <Card className="mt-4" />
+                    <Card className="mt-4"/>
                 </div>
                 {includeScorestreaks && (
-                    <div className="col-span-1 flex flex-col gap-4">
-                    <Card/>
-                        <Card/>
-                        <Card/>
-                    </div>
+                    <>
+                        <h2 className="md:hidden text-white mt-4 md:mt-0 text-2xl">
+                            Scorestreaks
+                        </h2>
+                        <div className="col-span-1 flex flex-col gap-4">
+                            <Card/>
+                            <Card/>
+                            <Card/>
+                        </div>
+                    </>
                 )}
             </div>
         </div>
