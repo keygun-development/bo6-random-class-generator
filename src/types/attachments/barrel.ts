@@ -15,11 +15,11 @@ export type BarrelNames =
     | "Suppressed Long Barrel"
     | "Suppressed Reinforced Barrel";
 
-type RifleBarrelNames = Extract<BarrelNames, "CHF Barrel"
+export type RifleBarrelNames = Extract<BarrelNames, "CHF Barrel"
     | "Gain-Twist Barrel"
     | "Long Barrel"
     | "Reinforced Barrel"
     | "Short Barrel"
 >
 
-export type RifleBarrelAttachment = Attachment<RifleBarrelNames>
+export type RifleBarrelAttachment<T extends string = RifleBarrelNames> = Attachment<T>

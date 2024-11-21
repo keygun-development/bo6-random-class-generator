@@ -7,4 +7,4 @@ export type LaserNames =
     | "Tactical Laser"
     | "Target Laser";
 
-export type RifleLaserAttachment = Attachment<LaserNames>
+export type RifleLaserAttachment<T extends string = LaserNames> = Attachment<T>

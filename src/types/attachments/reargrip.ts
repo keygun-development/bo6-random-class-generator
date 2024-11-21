@@ -7,10 +7,10 @@ export type RearGripNames =
     | "Ergonomic Grip"
     | "Quickdraw Grip";
 
-type RifleRearGripNames = Extract<RearGripNames, "Assault Grip"
+export type RifleRearGripNames = Extract<RearGripNames, "Assault Grip"
     | "Commando Grip"
     | "CQB Grip"
     | "Ërgonomic Grip"
 >
 
-export type RifleRearGripAttachment = Attachment<RifleRearGripNames>
+export type RifleRearGripAttachment<T extends string = RearGripNames> = Attachment<T>

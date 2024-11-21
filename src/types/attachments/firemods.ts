@@ -25,10 +25,10 @@ export type FireModNames =
     | "Rapid Fire"
     | "Recoil Springs";
 
-type RifleFireModNames = Extract<FireModNames, "5.56 NATO FMJ"
+export type RifleFireModNames = Extract<FireModNames, "5.56 NATO FMJ"
     | "5.56 NATO Overpressured"
     | "Rapid Fire"
     | "Recoil Springs"
 >
 
-export type RifleFireModAttachments = Attachment<RifleFireModNames>
+export type RifleFireModAttachments<T extends string = FireModNames> = Attachment<T>

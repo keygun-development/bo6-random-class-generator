@@ -3,10 +3,10 @@ import {RifleOpticAttachment} from "@/types/attachments/optic.ts";
 import {RifleBarrelAttachment} from "@/types/attachments/barrel.ts";
 import {RifleUnderBarrelAttachment} from "@/types/attachments/underbarrel.ts";
 import {RifleMagazineAttachment} from "@/types/attachments/magazine.ts";
-import {RifleRearGripAttachment} from "@/types/attachments/reargrip.ts";
+import {RifleRearGripAttachment, RifleRearGripNames} from "@/types/attachments/reargrip.ts";
 import {RifleStockAttachment} from "@/types/attachments/stock.ts";
 import {RifleLaserAttachment} from "@/types/attachments/laser.ts";
-import {RifleFireModAttachments} from "@/types/attachments/firemods.ts";
+import {RifleFireModAttachments, RifleFireModNames} from "@/types/attachments/firemods.ts";
 
 export const rifleMuzzleNames = ["Compensator", "Muzzle Brake", "Suppressor", "Ported Compensator"];
 export const rifleOpticNames = [
@@ -96,20 +96,20 @@ export const rifleFireModNames = [
     "Recoil Springs"
 ]
 
-export type RifleAttachments = {
+export type GenericRifleAttachments = {
     muzzles: RifleMuzzleAttachment[];
     optics: RifleOpticAttachment[];
     barrels: RifleBarrelAttachment[];
     underbarrels: RifleUnderBarrelAttachment[];
     magazines: RifleMagazineAttachment[];
-    rearGrips: RifleRearGripAttachment[];
+    rearGrips: RifleRearGripAttachment<RifleRearGripNames>[];
     stocks: RifleStockAttachment[];
     lasers: RifleLaserAttachment[];
-    firemods: RifleFireModAttachments[];
+    firemods: RifleFireModAttachments<RifleFireModNames>[];
 };
 
-export type Rifle = {
+export type GenericRifle<A = GenericRifleAttachments> = {
     name: string;
     image: string;
-    attachments: RifleAttachments;
+    attachments: A;
 };

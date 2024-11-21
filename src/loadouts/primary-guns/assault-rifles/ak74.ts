@@ -1,5 +1,4 @@
 import {
-    GenericRifle,
     rifleBarrelNames,
     rifleFireModNames,
     rifleLaserNames,
@@ -21,17 +20,18 @@ import {RifleUnderBarrelAttachment} from "@/types/attachments/underbarrel.ts";
 import {magazines} from "@/loadouts/attachments/magazines.ts";
 import {RifleMagazineAttachment} from "@/types/attachments/magazine.ts";
 import {rearGrips} from "@/loadouts/attachments/reargrips.ts";
-import {RifleRearGripAttachment, RifleRearGripNames} from "@/types/attachments/reargrip.ts";
+import {RifleRearGripAttachment} from "@/types/attachments/reargrip.ts";
 import {stocks} from "@/loadouts/attachments/stocks.ts";
 import {RifleStockAttachment} from "@/types/attachments/stock.ts";
 import {lasers} from "@/loadouts/attachments/lasers.ts";
 import {RifleLaserAttachment} from "@/types/attachments/laser.ts";
 import {firemods} from "@/loadouts/attachments/firemods.ts";
-import {RifleFireModAttachments, RifleFireModNames} from "@/types/attachments/firemods.ts";
+import {RifleFireModAttachments} from "@/types/attachments/firemods.ts";
+import {AKBarrelNames, AKFireModNames, AKGripNames, AKLaserNames, AKRifle} from "@/types/guns/assault-rifles/ak74.ts";
 
-export const xm4: GenericRifle = {
-    name: "XM4",
-    image: "/images/guns/xm4.png",
+export const ak74: AKRifle = {
+    name: "AK74",
+    image: "/images/guns/ak74.png",
     attachments: {
         muzzles: muzzles.filter(
             (muzzle): muzzle is RifleMuzzleAttachment =>
@@ -41,7 +41,7 @@ export const xm4: GenericRifle = {
             rifleOpticNames.includes(optic.name)
         ),
         barrels: barrels.filter(
-            (barrel): barrel is RifleBarrelAttachment =>
+            (barrel): barrel is RifleBarrelAttachment<AKBarrelNames> =>
                 rifleBarrelNames.includes(barrel.name)
         ),
         underbarrels: underBarrels.filter(
@@ -53,7 +53,7 @@ export const xm4: GenericRifle = {
                 rifleMagazineNames.includes(magazine.name)
         ),
         rearGrips: rearGrips.filter(
-            (rearGrip): rearGrip is RifleRearGripAttachment<RifleRearGripNames> =>
+            (rearGrip): rearGrip is RifleRearGripAttachment<AKGripNames> =>
                 rifleRearGripNames.includes(rearGrip.name)
         ),
         stocks: stocks.filter(
@@ -61,11 +61,11 @@ export const xm4: GenericRifle = {
                 rifleStockNames.includes(stock.name)
         ),
         lasers: lasers.filter(
-            (laser): laser is RifleLaserAttachment =>
+            (laser): laser is RifleLaserAttachment<AKLaserNames> =>
                 rifleLaserNames.includes(laser.name)
         ),
         firemods: firemods.filter(
-            (firemod): firemod is RifleFireModAttachments<RifleFireModNames> =>
+            (firemod): firemod is RifleFireModAttachments<AKFireModNames> =>
                 rifleFireModNames.includes(firemod.name)
         )
     }
