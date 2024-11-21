@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: 'COD';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('/fonts/CallOfOpsDuty.ttf');
+}
+
+body {
+    font-family: 'COD', sans-serif;
+}
