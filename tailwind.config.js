@@ -18,7 +18,7 @@ export default {
       },
       animation: {
         float: 'float 4s ease-in-out infinite',
-        floatSlow: 'floatSlow 6s ease-in-out infinite',
+        "float-slow": 'floatSlow 6s ease-in-out infinite',
       },
       colors: {
         primary: "#413f3f",
