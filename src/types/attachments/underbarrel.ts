@@ -1,3 +1,5 @@
+import {Attachment} from "@/types";
+
 export type UnderBarrelNames =
     | "Crossbar"
     | "Launcher - Drill Charge"
@@ -15,3 +17,16 @@ export type UnderBarrelNames =
     | "Vertical Foregrip"
     | "Weighted Foregrip"
     | "Weighted Handguard";
+
+type RifleUnderBarrelNames = Extract<UnderBarrelNames, "Launcher - Drill Charge"
+    | "Launcher - High Explosive"
+    | "Launcher - Smoke"
+    | "Launcher - Standard"
+    | "Lightweight Foregrip"
+    | "Marksman Foregrip"
+    | "Precision Foregrip"
+    | "Ranger Foregrip"
+    | "Vertical Foregrip"
+>
+
+export type RifleUnderBarrelAttachment = Attachment<RifleUnderBarrelNames>

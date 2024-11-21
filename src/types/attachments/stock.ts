@@ -1,3 +1,5 @@
+import {Attachment} from "@/types";
+
 export type StockNames =
     | "Agility Stock"
     | "Akimbo 9mm PM"
@@ -13,3 +15,12 @@ export type StockNames =
     | "Light Stock"
     | "No Stock"
     | "Weighted Stock";
+
+type RifleStockNames = Extract<StockNames, "Balanced Stock"
+    | "Combat Stock"
+    | "Heavy Stock"
+    | "Infiltrator Stock"
+    | "Light Stock"
+>
+
+export type RifleStockAttachment = Attachment<RifleStockNames>
