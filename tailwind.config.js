@@ -23,7 +23,8 @@ export default {
       colors: {
         primary: "#413f3f",
         "primary-foreground": "#ffffff",
-        darkblue: '#000c21'
+        darkblue: '#000c21',
+        "paypal": '#00457C'
       }
     },
   },
