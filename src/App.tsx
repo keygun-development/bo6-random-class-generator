@@ -2,10 +2,14 @@ import {xm4} from "@/loadouts/primary-guns/assault-rifles/xm4.ts";
 import {Checkbox} from "@/components/ui/checkbox.tsx";
 import Card from "@/components/Card.tsx";
 import {useState} from "react";
+import {Randomizer} from "@/lib/Randomize.ts";
+import {scorestreaks} from "@/scorestreaks";
 
 function App() {
     const [includeScorestreaks, setIncludeScorestreaks] = useState(true)
-    console.log(xm4.attachments.muzzles)
+    const randomizer = new Randomizer(scorestreaks);
+    const randomScorestreaks = randomizer.randomize(3);
+    randomizer.reset();
 
     return (
         <div className="mt-4 mb-8 min-h-full md:px-10 mx-auto xl:px-20 2xl:max-w-[1280px] 2xl:px-0 w-full px-4">
@@ -57,9 +61,9 @@ function App() {
                             Scorestreaks
                         </h2>
                         <div className="col-span-1 flex flex-col gap-4">
-                            <Card/>
-                            <Card/>
-                            <Card/>
+                            <Card item={randomScorestreaks[0]}/>
+                            <Card item={randomScorestreaks[1]}/>
+                            <Card item={randomScorestreaks[2]}/>
                         </div>
                     </>
                 )}
