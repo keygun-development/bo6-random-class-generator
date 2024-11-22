@@ -1,4 +1,3 @@
-import {xm4} from "@/loadouts/primary-guns/assault-rifles/xm4.ts";
 import {Checkbox} from "@/components/ui/checkbox.tsx";
 import Card from "@/components/Card.tsx";
 import {useState} from "react";
