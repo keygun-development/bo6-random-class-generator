@@ -1,19 +1,16 @@
-import { config } from 'dotenv';
-import SitemapGenerator from "sitemap-generator"
+import {config} from 'dotenv';
+import SitemapGenerator from 'sitemap-generator';
 
 config();
 
-const APP_URL = process.env.VITE_APP_URL;
-
-const generator = SitemapGenerator(APP_URL, {
+const generator = SitemapGenerator("https://dev-bo6-random-class.netlify.app/", {
     stripQuerystring: true,
     filepath: './public/sitemap.xml',
     maxDepth: 0,
 });
 
 generator.on('done', (e) => {
-    console.log(e);
+    console.log('Sitemap generation done:', e);
 });
 
-// Start the generator
 generator.start();
