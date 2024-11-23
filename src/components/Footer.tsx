@@ -5,7 +5,9 @@ export default function Footer() {
             <p className="font-sans text-center flex justify-center gap-x-1">
                 &copy; {year}
                 <a href="https://github.com/keygun-development/bo6-random-class-generator"
-                   className="font-semibold hover:underline">
+                   className="font-semibold hover:underline"
+                   target="_blank"
+                >
                     @Keygun-development
                 </a>
             </p>
