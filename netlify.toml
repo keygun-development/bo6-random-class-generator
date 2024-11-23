@@ -2,4 +2,4 @@
   command = "npm run build"
 
 [[plugins]]
-  package = "./netlify-plugin-generate-sitemap.js"
+  package = "./netlify-plugin-generate-sitemap"
