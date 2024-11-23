@@ -1,4 +1,5 @@
 import {Button} from "@/components/ui/button.tsx";
+import {Link} from "react-router-dom";
 
 export default function ThankYou() {
     return (
@@ -15,9 +16,9 @@ export default function ThankYou() {
                 </p>
                 <p className="mt-6 text-white/80">Have a wonderful day!</p>
                 <Button variant="primary" className="mt-4 text-white" asChild>
-                    <a href="/">
+                    <Link to="/">
                         Return Home
-                    </a>
+                    </Link>
                 </Button>
             </div>
         </div>
