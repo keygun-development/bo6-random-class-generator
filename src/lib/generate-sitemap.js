@@ -1,7 +1,4 @@
-import {config} from 'dotenv';
 import SitemapGenerator from 'sitemap-generator';
-
-config();
 
 const generator = SitemapGenerator("https://dev-bo6-random-class.netlify.app/", {
     stripQuerystring: true,
