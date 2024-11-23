@@ -7,13 +7,15 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "npx eslint . && echo \"\nCompiling TS with strict true\" && tsc --noEmit --strict true",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-sitemap": "node src/lib/generate-sitemap.js"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "dotenv": "^16.4.5",
     "lucide-react": "^0.460.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -33,6 +35,7 @@
     "eslint-plugin-react-refresh": "^0.4.14",
     "globals": "^15.11.0",
     "postcss": "^8.4.49",
+    "sitemap-generator": "^8.5.1",
     "tailwindcss": "^3.4.15",
     "ts-node": "^10.9.2",
     "typescript": "~5.6.2",
