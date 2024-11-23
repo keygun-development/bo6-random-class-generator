@@ -8,7 +8,8 @@
     "build": "tsc -b && vite build",
     "lint": "npx eslint . && echo \"\nCompiling TS with strict true\" && tsc --noEmit --strict true",
     "preview": "vite preview",
-    "generate-sitemap": "node src/lib/generate-sitemap.js"
+    "generate-sitemap": "node src/lib/generate-sitemap.js",
+    "deploy": "npm run build && npm run generate-sitemap"
   },
   "dependencies": {
     "@radix-ui/react-checkbox": "^1.1.2",
