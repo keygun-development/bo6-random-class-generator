@@ -3,7 +3,7 @@ import SitemapGenerator from 'sitemap-generator';
 
 config();
 
-const generator = SitemapGenerator("https://dev-bo6-random-class.netlify.app/", {
+const generator = SitemapGenerator("https://bo6-random-class-generator.netlify.app/", {
     stripQuerystring: true,
     filepath: './public/sitemap.xml',
     maxDepth: 0,
