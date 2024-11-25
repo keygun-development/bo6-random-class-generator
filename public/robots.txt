@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bo6-random-class.netlify.app/sitemap.xml

@@ -1,6 +1,7 @@
 import {Attachment} from "@/types";
+import {LaserNames} from "@/types/attachments/laser.ts";
 
-export const lasers: Attachment[] = [
+export const lasers: Attachment<LaserNames>[] = [
     {
         name: "Fast Motion Laser",
         image: "/attachments/lasers/fast_motion_laser.png",

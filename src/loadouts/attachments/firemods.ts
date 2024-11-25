@@ -1,6 +1,7 @@
 import {Attachment} from "@/types";
+import {FireModNames} from "@/types/attachments/firemods.ts";
 
-export const firemods: Attachment[] = [
+export const firemods: Attachment<FireModNames>[] = [
     {
         name: ".22 WMR FMJ",
         image: "/attachments/firemods/22-wmr-fmj.png",

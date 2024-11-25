@@ -1,6 +1,6 @@
 import {Rifle, rifleMuzzleNames} from "@/types/rifle.ts";
 import {muzzles} from "@/loadouts/attachments/muzzles.ts";
-import {RifleMuzzleAttachment} from "@/types/muzzle.ts";
+import {RifleMuzzleAttachment} from "@/types/attachments/muzzle.ts";
 
 export const xm4: Rifle = {
     name: "XM4",
