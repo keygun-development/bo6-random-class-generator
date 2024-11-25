@@ -15,6 +15,7 @@ function App() {
             <div className="flex justify-between items-center">
                 <div className="space-x-2">
                     <Checkbox
+                        aria-label="Include scorestreaks?"
                         onCheckedChange={(e: boolean) => setIncludeScorestreaks(e)}
                         checked={includeScorestreaks}/>
                     <span className="text-white">
