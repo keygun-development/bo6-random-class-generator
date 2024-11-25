@@ -5,7 +5,8 @@ import "./index.css";
 import App from "./App.tsx";
 import Header from "@/components/Header.tsx";
 import Footer from "@/components/Footer.tsx";
-import ThankYou from "./Completed.tsx";
+import ThankYou from "@/Completed.tsx";
+import NotFound from "@/NotFound.tsx";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
@@ -14,6 +15,7 @@ createRoot(document.getElementById("root")!).render(
             <Routes>
                 <Route path="/" element={<App />} />
                 <Route path="/completed" element={<ThankYou />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
         </Router>
