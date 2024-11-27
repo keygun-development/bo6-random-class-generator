@@ -3,17 +3,9 @@ import {Card} from "@/components/Card.tsx";
 import {useState} from "react";
 import {Randomizer} from "@/lib/Randomize.ts";
 import {scorestreaks} from "@/scorestreaks";
-import {
-    Drawer,
-    DrawerClose,
-    DrawerContent,
-    DrawerDescription,
-    DrawerFooter,
-    DrawerHeader,
-    DrawerTitle,
-    DrawerTrigger,
-} from "@/components/ui/drawer"
 import {Button} from "@/components/ui/button.tsx";
+import Primary from "@/components/Primary.tsx";
+import Secondary from "@/components/Secondary.tsx";
 
 function App() {
     const [includeScorestreaks, setIncludeScorestreaks] = useState(true)
@@ -53,26 +45,9 @@ function App() {
             </div>
             <div className="md:grid grid-cols-4 gap-4 mt-4">
                 <div className="col-span-3">
-                    <Drawer>
-                        <DrawerTrigger asChild>
-                            <Card/>
-                        </DrawerTrigger>
-                        <DrawerContent>
-                            <DrawerHeader>
-                                <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-                                <DrawerDescription>This action cannot be undone.</DrawerDescription>
-                            </DrawerHeader>
-                            <DrawerFooter>
-                                <Button>Submit</Button>
-                                <DrawerClose>
-                                    <Button variant="outline">Cancel</Button>
-                                </DrawerClose>
-                            </DrawerFooter>
-                        </DrawerContent>
-                    </Drawer>
-
+                    <Primary />
                     <div className="grid grid-cols-2 gap-4 mt-4">
-                        <Card/>
+                        <Secondary />
                         <Card/>
                         <div className="grid grid-cols-2 gap-4">
                             <Card/>
