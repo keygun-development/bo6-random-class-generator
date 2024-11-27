@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://bo6-random-class-generator.netlify.app/sitemap.xml
+Sitemap: https://bo6randomclassgenerator.nl/sitemap.xml
