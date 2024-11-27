@@ -10,7 +10,7 @@ In the past I used a staging environment, but it felt like duplicate of content.
 
 ## Production Site
 The stable and public-facing version of the Black Ops 6 Random Generator is hosted at:  
-[**Production Site**](https://bo6-random-class-generator.netlify.app/)
+[**Production Site**](https://bo6randomclassgenerator.nl/)
 
 This version is optimized for performance and reliability, providing a seamless experience for users.
 

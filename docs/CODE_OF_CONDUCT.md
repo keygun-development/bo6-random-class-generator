@@ -23,7 +23,7 @@ Branches should be named using the following format:
 
 ### `main` Branch
 - **Purpose**: The `main` branch always contains tested and working code.
-- **Deployment**: It is connected to the production environment, which is available at [https://bo6-random-class-generator.netlify.app/](https://bo6-random-class-generator.netlify.app/).
+- **Deployment**: It is connected to the production environment, which is available at [https://bo6randomclassgenerator.nl/](https://bo6randomclassgenerator.nl/).
 - **Code Quality**: Only code that is fully tested and validated should be merged into the `main` branch.
 - **Best Practice**: Code pushed to the `main` branch should always be production-ready.
 
