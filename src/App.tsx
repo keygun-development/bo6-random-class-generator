@@ -1,15 +1,22 @@
 import {Checkbox} from "@/components/ui/checkbox.tsx";
-import Card from "@/components/Card.tsx";
+import {Card} from "@/components/Card.tsx";
 import {useState} from "react";
 import {Randomizer} from "@/lib/Randomize.ts";
 import {scorestreaks} from "@/scorestreaks";
+import {Button} from "@/components/ui/button.tsx";
+import Primary from "@/components/Primary.tsx";
+import Secondary from "@/components/Secondary.tsx";
 
 function App() {
     const [includeScorestreaks, setIncludeScorestreaks] = useState(true)
     const randomizer = new Randomizer(scorestreaks);
-    const randomScorestreaks = randomizer.randomize(3);
+    const [randomScorestreaks, setRandomScorestreaks] = useState(randomizer.randomize(3));
     randomizer.reset();
 
+    const reRoll = () => {
+        setRandomScorestreaks(randomizer.randomize(3));
+        randomizer.reset()
+    }
     return (
         <div className="mt-4 mb-8 min-h-full md:px-10 mx-auto xl:px-20 2xl:max-w-[1280px] 2xl:px-0 w-full px-4">
             <div className="flex justify-between items-center">
@@ -22,6 +29,9 @@ function App() {
                         Include scorestreaks?
                     </span>
                 </div>
+                <Button onClick={() => reRoll()} variant="primary">
+                    Randomize
+                </Button>
             </div>
             <div className="md:grid grid-cols-4 gap-4 mt-4">
                 <h1 className="col-span-3 text-white lg:text-4xl text-2xl md:text-2xl">
@@ -35,25 +45,25 @@ function App() {
             </div>
             <div className="md:grid grid-cols-4 gap-4 mt-4">
                 <div className="col-span-3">
-                    <Card/>
+                    <Primary />
                     <div className="grid grid-cols-2 gap-4 mt-4">
-                        <Card/>
-                        <Card/>
-                        <div className="grid grid-cols-2 gap-4">
-                            <Card/>
-                            <Card/>
+                        <Secondary />
+                        <Card item={{name: "Baseball bat"}}/>
+                        <div className="grid md:grid-cols-2 gap-4">
+                            <Card item={{name: "Semtex"}}/>
+                            <Card item={{name: "Stimshot"}}/>
                         </div>
-                        <Card/>
-                        <div className="grid grid-cols-2 gap-4">
-                            <Card/>
-                            <Card/>
+                        <Card item={{name: "Assault pack"}}/>
+                        <div className="grid md:grid-cols-2 gap-4">
+                            <Card item={{name: "Dexterity"}}/>
+                            <Card item={{name: "Assassin"}}/>
                         </div>
-                        <div className="grid grid-cols-2 gap-4">
-                            <Card/>
-                            <Card/>
+                        <div className="grid md:grid-cols-2 gap-4">
+                            <Card item={{name: "Double Time"}}/>
+                            <Card item={{name: "Enforcer"}}/>
                         </div>
                     </div>
-                    <Card className="mt-4"/>
+                    <Card item={{name: "Gunfighter"}} className="mt-4"/>
                 </div>
                 {includeScorestreaks && (
                     <>
