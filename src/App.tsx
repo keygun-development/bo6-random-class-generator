@@ -48,22 +48,22 @@ function App() {
                     <Primary />
                     <div className="grid grid-cols-2 gap-4 mt-4">
                         <Secondary />
-                        <Card/>
-                        <div className="grid grid-cols-2 gap-4">
-                            <Card/>
-                            <Card/>
+                        <Card item={{name: "Baseball bat"}}/>
+                        <div className="grid md:grid-cols-2 gap-4">
+                            <Card item={{name: "Semtex"}}/>
+                            <Card item={{name: "Stimshot"}}/>
                         </div>
-                        <Card/>
-                        <div className="grid grid-cols-2 gap-4">
-                            <Card/>
-                            <Card/>
+                        <Card item={{name: "Assault pack"}}/>
+                        <div className="grid md:grid-cols-2 gap-4">
+                            <Card item={{name: "Dexterity"}}/>
+                            <Card item={{name: "Assassin"}}/>
                         </div>
-                        <div className="grid grid-cols-2 gap-4">
-                            <Card/>
-                            <Card/>
+                        <div className="grid md:grid-cols-2 gap-4">
+                            <Card item={{name: "Double Time"}}/>
+                            <Card item={{name: "Enforcer"}}/>
                         </div>
                     </div>
-                    <Card className="mt-4"/>
+                    <Card item={{name: "Gunfighter"}} className="mt-4"/>
                 </div>
                 {includeScorestreaks && (
                     <>
