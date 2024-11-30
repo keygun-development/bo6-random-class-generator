@@ -11,5 +11,10 @@ export const melees: Item<Melees>[] = [
         name: "Baseball Bat",
         description: "Two hit kill.",
         image: "/melees/baseball-bat.png",
+    },
+    {
+        name: "Power Drill",
+        description: "One hit kill.",
+        image: "/melees/power-drill.png",
     }
 ]

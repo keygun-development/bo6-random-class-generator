@@ -6,6 +6,10 @@ import {scorestreaks} from "@/scorestreaks";
 import {Button} from "@/components/ui/button.tsx";
 import Primary from "@/components/Primary.tsx";
 import Secondary from "@/components/Secondary.tsx";
+import {lethals} from "@/loadouts/lethals";
+import {melees} from "@/loadouts/melee";
+import {tacticals} from "@/loadouts/tacticals";
+import {fieldUpgrades} from "@/loadouts/field-upgrades";
 
 function App() {
     const [includeScorestreaks, setIncludeScorestreaks] = useState(true)
@@ -13,9 +17,33 @@ function App() {
     const [randomScorestreaks, setRandomScorestreaks] = useState(randomizer.randomize(3));
     randomizer.reset();
 
+    const randomLethal = new Randomizer(lethals);
+    const [randomLethalItem, setRandomLethalItem] = useState(randomLethal.randomize(1)[0]);
+    randomLethal.reset();
+
+    const randomMelee = new Randomizer(melees);
+    const [randomMeleeItem, setRandomMeleeItem] = useState(randomMelee.randomize(1)[0]);
+    randomMelee.reset();
+
+    const randomTactical = new Randomizer(tacticals);
+    const [randomTacticalItem, setRandomTacticalItem] = useState(randomTactical.randomize(1)[0]);
+    randomTactical.reset();
+
+    const randomFieldUpgrade = new Randomizer(fieldUpgrades);
+    const [randomFieldUpgradeItem, setRandomFieldUpgradeItem] = useState(randomFieldUpgrade.randomize(1)[0]);
+    randomFieldUpgrade.reset();
+
     const reRoll = () => {
         setRandomScorestreaks(randomizer.randomize(3));
+        setRandomLethalItem(randomLethal.randomize(1)[0]);
+        setRandomMeleeItem(randomMelee.randomize(1)[0]);
+        setRandomTacticalItem(randomTactical.randomize(1)[0]);
+        setRandomFieldUpgradeItem(randomFieldUpgrade.randomize(1)[0]);
         randomizer.reset()
+        randomLethal.reset()
+        randomMelee.reset()
+        randomTactical.reset()
+        randomFieldUpgrade.reset()
     }
     return (
         <div className="mt-4 mb-8 min-h-full md:px-10 mx-auto xl:px-20 2xl:max-w-[1280px] 2xl:px-0 w-full px-4">
@@ -48,12 +76,12 @@ function App() {
                     <Primary />
                     <div className="grid grid-cols-2 gap-4 mt-4">
                         <Secondary />
-                        <Card item={{name: "Baseball bat"}}/>
+                        <Card item={randomMeleeItem}/>
                         <div className="grid md:grid-cols-2 gap-4">
-                            <Card item={{name: "Semtex"}}/>
-                            <Card item={{name: "Stimshot"}}/>
+                            <Card item={randomLethalItem}/>
+                            <Card item={randomTacticalItem}/>
                         </div>
-                        <Card item={{name: "Assault pack"}}/>
+                        <Card item={randomFieldUpgradeItem}/>
                         <div className="grid md:grid-cols-2 gap-4">
                             <Card item={{name: "Dexterity"}}/>
                             <Card item={{name: "Assassin"}}/>
