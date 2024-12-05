@@ -10,7 +10,7 @@ export type MagazineNames =
     | "Fast Mag III"
     | "Flip Mag";
 
-type RifleMagazineNames = Extract<MagazineNames, "Extended Mag I"
+export type RifleMagazineNames = Extract<MagazineNames, "Extended Mag I"
     | "Extended Mag II"
     | "Extended Mag III"
     | "Fast Mag I"
@@ -18,4 +18,4 @@ type RifleMagazineNames = Extract<MagazineNames, "Extended Mag I"
     | "Flip Mag"
 >
 
-export type RifleMagazineAttachment = Attachment<RifleMagazineNames>
+export type RifleMagazineAttachment<T extends string = RifleMagazineNames> = Attachment<T>

@@ -16,11 +16,11 @@ export type StockNames =
     | "No Stock"
     | "Weighted Stock";
 
-type RifleStockNames = Extract<StockNames, "Balanced Stock"
+export type RifleStockNames = Extract<StockNames, "Balanced Stock"
     | "Combat Stock"
     | "Heavy Stock"
     | "Infiltrator Stock"
     | "Light Stock"
 >
 
-export type RifleStockAttachment = Attachment<RifleStockNames>
+export type RifleStockAttachment<T extends string = StockNames> = Attachment<T>

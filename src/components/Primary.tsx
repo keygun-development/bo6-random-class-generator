@@ -12,9 +12,11 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/compon
 import {cn} from "@/lib/utils.ts";
 import Attachment from "@/components/Attachment.tsx";
 import {VisuallyHidden} from "@radix-ui/react-visually-hidden";
+import {GenericRifle, GenericRifleAttachments} from "@/types/guns/assault-rifles/rifle.ts";
+import {AKAttachments} from "@/types/guns/assault-rifles/ak74.ts";
 
-export default function Primary({item = {name: "xm4"}, hasGunfighter = true}: {
-    item?: { name: string },
+export default function Primary({item, hasGunfighter = true}: {
+    item?: GenericRifle<GenericRifleAttachments | AKAttachments>,
     hasGunfighter?: boolean
 }) {
     return (
@@ -31,7 +33,7 @@ export default function Primary({item = {name: "xm4"}, hasGunfighter = true}: {
                                     Attachments
                                 </DrawerTitle>
                                 <DrawerDescription>
-                                    Attachments for the {item.name}
+                                    Attachments for the {item?.name}
                                 </DrawerDescription>
                             </VisuallyHidden>
                             <DrawerHeader>

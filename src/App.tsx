@@ -10,6 +10,7 @@ import {lethals} from "@/loadouts/lethals";
 import {melees} from "@/loadouts/melee";
 import {tacticals} from "@/loadouts/tacticals";
 import {fieldUpgrades} from "@/loadouts/field-upgrades";
+import {assaultRifles} from "@/loadouts/primary-guns/assault-rifles";
 
 function App() {
     const [includeScorestreaks, setIncludeScorestreaks] = useState(true)
@@ -33,17 +34,23 @@ function App() {
     const [randomFieldUpgradeItem, setRandomFieldUpgradeItem] = useState(randomFieldUpgrade.randomize(1)[0]);
     randomFieldUpgrade.reset();
 
+    const randomPrimary = new Randomizer(assaultRifles);
+    const [randomPrimaryItem, setRandomPrimaryItem] = useState(randomPrimary.randomize(1)[0]);
+    randomPrimary.reset();
+
     const reRoll = () => {
         setRandomScorestreaks(randomizer.randomize(3));
         setRandomLethalItem(randomLethal.randomize(1)[0]);
         setRandomMeleeItem(randomMelee.randomize(1)[0]);
         setRandomTacticalItem(randomTactical.randomize(1)[0]);
         setRandomFieldUpgradeItem(randomFieldUpgrade.randomize(1)[0]);
+        setRandomPrimaryItem(randomPrimary.randomize(1)[0]);
         randomizer.reset()
         randomLethal.reset()
         randomMelee.reset()
         randomTactical.reset()
         randomFieldUpgrade.reset()
+        randomPrimary.reset()
     }
     return (
         <div className="mt-4 mb-8 min-h-full md:px-10 mx-auto xl:px-20 2xl:max-w-[1280px] 2xl:px-0 w-full px-4">
@@ -73,7 +80,7 @@ function App() {
             </div>
             <div className="md:grid grid-cols-4 gap-4 mt-4">
                 <div className="col-span-3">
-                    <Primary />
+                    <Primary item={randomPrimaryItem} />
                     <div className="grid grid-cols-2 gap-4 mt-4">
                         <Secondary />
                         <Card item={randomMeleeItem}/>
